@@ -1,19 +1,14 @@
 class Genre 
   extend Concerns::Findable
   attr_accessor :name 
-<<<<<<< HEAD
   attr_reader :songs
-=======
->>>>>>> 278f79fdec8003babf0f88422c959019ce30c1b6
+
   @@all = []
   
   def initialize(name)
     @name = name
     @songs = []
-<<<<<<< HEAD
-=======
     save
->>>>>>> 278f79fdec8003babf0f88422c959019ce30c1b6
   end
   
   def save
