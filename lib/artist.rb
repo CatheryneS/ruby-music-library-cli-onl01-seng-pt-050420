@@ -43,7 +43,8 @@ class Artist
     # song_list.map(&:genre).uniq # interates through all the artist's songs to find the genre, then only returns unique genres.
     
      songs.map(&:genre).uniq
-     
+  end
+   
   def add_song(song)
     song.artist = self unless song.artist
     @songs << song unless @songs.include?(song)
@@ -54,12 +55,3 @@ class Artist
     song_list.map(&:genre).uniq # interates through all the artist's songs to find the genre, then only returns unique genres.
   end
 end
-
-
-
-
-
-
-
-
-
