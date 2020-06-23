@@ -19,6 +19,7 @@ class Artist
   
   def self.destroy_all
     all.clear
+    @@all.clear
   end
   
   def self.create(artist)
@@ -42,6 +43,15 @@ class Artist
     # song_list.map(&:genre).uniq # interates through all the artist's songs to find the genre, then only returns unique genres.
     
      songs.map(&:genre).uniq
+     
+  def add_song(song)
+    song.artist = self unless song.artist
+    @songs << song unless @songs.include?(song)
+  end
+  
+  def genres
+    song_list = Song.all.select {|song| song.artist == self}
+    song_list.map(&:genre).uniq # interates through all the artist's songs to find the genre, then only returns unique genres.
   end
 end
 
