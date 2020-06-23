@@ -34,7 +34,7 @@ class Genre
   #   Song.all {|song| song.genre == self}
   # end
 
-  end
+  # end
   
   def songs
     #@songs
